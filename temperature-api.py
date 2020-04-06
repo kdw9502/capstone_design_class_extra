@@ -27,7 +27,7 @@ day = int(time_string[6:8])
 hour = int(time_string[8:10])
 minute = int(time_string[10:12])
 
-for data in body.findall('data'):
+for data in body.findall('data')[:3]:
 
     base_datetime = datetime.datetime(year, month, day, hour, minute)
     diff_hour = int(data.find('hour').text)
